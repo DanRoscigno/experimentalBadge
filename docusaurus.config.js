@@ -48,9 +48,9 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           admonitions: {
-            keywords: ['my-custom-admonition'],
+            keywords: ['my-custom-admonition','opentelemetry-tip'],
             extendDefaults: true,
-          },
+            },
         },
         blog: {
           showReadingTime: true,
