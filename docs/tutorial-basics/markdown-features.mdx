@@ -85,17 +85,9 @@ It works!
 
 :::
 
-:::opentelemetry-tip[A quick word on semantic conventions]
+:::opentelemetry-tip[experimental feature]
 
-OpenTelemetry is at its most powerful when you follow its conventions.
-    
-We're using the power of OpenTelemetry's _semantic conventions_ here, which is a list of well-known and standardized attributes that can be applied to your telemetry signals. Attributes allow us to slice and dice our telemetry, so that we can view metrics, logs and traces from only the specific service instances that we're interested in.
-
-The attribute `service.namespace` is part of OpenTelemetry's semantic conventions. We can use it to store a namespace or grouping for our service. So it makes a pretty good choice for a filter here, to identify your applications from those of your fellow lab attendees.
-
-We've also used the attribute `deployment.environment`, which is used by Grafana Cloud Application Observability to populate its _Environment_ drop-down list.
-
-You'll become more familiar with OpenTelemetry resource attributes as you use them.
+[Advice on use of experimental features](https://docs.starrocks.io/docs/introduction/maturity/).
 
 :::
 
