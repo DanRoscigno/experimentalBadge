@@ -4,21 +4,30 @@ sidebar_position: 4
 
 # Markdown Features
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+:::my-custom-admonition[My Title]
 
-## Front Matter
+It works!
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+:::
 
-```text title="my-doc.md"
-// highlight-start
----
-id: my-doc-id
-title: My document title
-description: My document description
-slug: /my-custom-url
----
-// highlight-end
+:::example[My Title]
+
+It works!
+
+:::
+
+:::tip My tip
+
+Use this awesome feature option
+
+:::
+
+:::opentelemetry-tip[experimental feature]
+
+[Advice on use of experimental features](https://docs.starrocks.io/docs/introduction/maturity/).
+
+:::
+
 
 ## Markdown heading
 
@@ -79,36 +88,6 @@ function HelloDocusaurus() {
 
 Docusaurus has a special syntax to create admonitions and callouts:
 
-:::my-custom-admonition[My Title]
-
-It works!
-
-:::
-
-:::example[My Title]
-
-It works!
-
-:::
-
-:::opentelemetry-tip[experimental feature]
-
-[Advice on use of experimental features](https://docs.starrocks.io/docs/introduction/maturity/).
-
-:::
-
-1. foo
-
-   blah blah
-
-1. bar
-
-```md
-:::tip My tip
-
-Use this awesome feature option
-
-:::
 
 :::danger Take care
 

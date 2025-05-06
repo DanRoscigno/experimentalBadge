@@ -82,17 +82,23 @@ a {
 	margin-bottom: 0.3rem;
 }
 
-.admonitionIcon_rXq6 {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 0.4em;
-}
 
 .admonitionIcon_rXq6 svg {
 	display: inline-block;
 	height: 1.6em;
 	width: 1.6em;
 	fill: var(--ifm-alert-foreground-color);
+}
+
+.admonitionIcon_rXq6 {
+    display: flex;
+    vertical-align: middle;
+    margin-right: 0.4em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: baseline;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .theme-admonition {
