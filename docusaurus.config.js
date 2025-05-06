@@ -48,7 +48,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           admonitions: {
-            keywords: ['example', 'my-custom-admonition','opentelemetry-tip'],
+            keywords: ['example', 'my-custom-admonition','opentelemetry-tip', 'beta'],
             extendDefaults: true,
             },
         },

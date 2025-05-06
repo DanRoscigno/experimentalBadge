@@ -81,6 +81,7 @@ a {
 	margin-bottom: 1em;
 }
 
+/* duplicate these color blocks for beta and make them closer to the tip color */
 .alert--experimental {
 	--ifm-alert-background-color: rgba(138, 176, 167, 0.29);
 	--ifm-alert-background-color-highlight: rgba(6, 27, 48, 0.054);
@@ -95,6 +96,22 @@ a {
 	--ifm-alert-border-color: rgb(138, 176, 167);
 }
 
+.beta {
+	--ifm-code-background: var(--ifm-alert-background-color-highlight);
+	--ifm-link-color: var(--ifm-alert-foreground-color);
+	--ifm-link-hover-color: var(--ifm-alert-foreground-color);
+	--ifm-link-decoration: underline;
+	--ifm-tabs-color: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+	background-color: var(--ifm-alert-background-color);
+	border: var(--ifm-alert-border-width) solid var(--ifm-alert-border-color);
+	border-left-width: var(--ifm-alert-border-left-width);
+	border-radius: var(--ifm-alert-border-radius);
+	box-shadow: var(--ifm-alert-shadow);
+	color: black;
+	padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
 .experimental {
 	--ifm-code-background: var(--ifm-alert-background-color-highlight);
 	--ifm-link-color: var(--ifm-alert-foreground-color);
