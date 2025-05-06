@@ -15,12 +15,14 @@ function MyCustomAdmonition(props) {
 
 function OpenTelemetryTipAdmonition(props) {
   return (
-    <div className={'admonition-otel'}> 
-      <div className={'icon-container'}>
-        <img src={useBaseUrl('/img/ExperimentalBadge.svg')} alt="Experimental icon" />
+		<div className="theme-admonition theme-admonition-example admonition_o5H7 example alert--example">
+			<div className="admonitionHeading_FzoX">
+				<span className="admonitionIcon_rXq6">
+        <img src={useBaseUrl('/img/ExperimentalBadge.svg')} style={{ width: '28px' }} alt="Experimental icon" />
+        {props.title}
+      </span>
       </div>
       <div>
-        <div className={'heading'}>{props.title}</div>
         <div className={'content'}>{props.children}</div>
       </div>
     </div>
