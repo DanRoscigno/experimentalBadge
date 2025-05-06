@@ -1,11 +1,12 @@
 import React from 'react';
+import { Icon } from "@iconify/react";
 import DefaultAdmonitionTypes from '@theme-original/Admonition/Types';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 //import MyCustomExperimentalIcon from '@site/static/img/ExperimentalBadge.svg';
 
 function MyCustomAdmonition(props) {
   return (
-    <div style={{border: 'solid red', padding: 10}}>
+    <div style={{border: 'solid white', padding: 10}}>
       <h5 style={{color: 'blue', fontSize: 30}}>{props.title}</h5>
       <div>{props.children}</div>
     </div>
@@ -17,13 +18,29 @@ function OpenTelemetryTipAdmonition(props) {
     <div className={'admonition-otel'}> 
       <div className={'icon-container'}>
         <img src={useBaseUrl('/img/ExperimentalBadge.svg')} alt="Experimental icon" />
-        </div>
+      </div>
       <div>
         <div className={'heading'}>{props.title}</div>
         <div className={'content'}>{props.children}</div>
       </div>
     </div>
   );
+}
+
+function Example(props) {
+	return (
+		<div className="theme-admonition theme-admonition-example admonition_o5H7 example alert--example">
+			<div className="admonitionHeading_FzoX">
+				<span className="admonitionIcon_rXq6">
+					<Icon icon="fluent:drafts-24-regular" />
+				</span>
+				{props.title?.length > 0
+					? props.title
+					: translate({ message: "Exemple" })}
+			</div>
+			<div className="admonitionContent_Knsx">{props.children}</div>
+		</div>
+	);
 }
 
 const AdmonitionTypes = {
@@ -33,6 +50,7 @@ const AdmonitionTypes = {
   // You can also override the default ones if you want
   'my-custom-admonition': MyCustomAdmonition,
   'opentelemetry-tip': OpenTelemetryTipAdmonition,
+  'example': Example,
 };
 
 export default AdmonitionTypes;
