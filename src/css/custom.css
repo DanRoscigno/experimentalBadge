@@ -13,10 +13,9 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+  --otel-admonition-background: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-  --otel-admonition-background: var(--ifm-color-secondary-light);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -29,6 +28,16 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --otel-admonition-background: #4fddbf;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+a {
+    color: #347e8d;
 }
 
 .admonition-otel {
@@ -36,7 +45,7 @@
   border-radius: var(--ifm-alert-border-radius);
   background-color: var(--otel-admonition-background);
   padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
-  align-items: top;
+  align-items: self-start;
 }
 
 .admonition-otel .icon-container {
@@ -54,3 +63,141 @@
   margin-bottom: 0;
 }
 
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-color: var(--ifm-navbar-link-color);
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+  transition: background-color var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+/* --- ADMONITIONS --- */
+.admonitionHeading_FzoX {
+	font: var(--ifm-heading-font-weight) var(--ifm-h5-font-size) /
+		var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+	text-transform: uppercase;
+	margin-bottom: 0.3rem;
+}
+
+.admonitionIcon_rXq6 {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.4em;
+}
+
+.admonitionIcon_rXq6 svg {
+	display: inline-block;
+	height: 1.6em;
+	width: 1.6em;
+	fill: var(--ifm-alert-foreground-color);
+}
+
+.theme-admonition {
+	margin-bottom: 1em;
+}
+
+/* --- USAGE ALERTES --- */
+.usage {
+	--ifm-code-background: var(--ifm-alert-background-color-highlight);
+	--ifm-link-color: var(--ifm-alert-foreground-color);
+	--ifm-link-hover-color: var(--ifm-alert-foreground-color);
+	--ifm-link-decoration: underline;
+	--ifm-tabs-color: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+	background-color: var(--ifm-alert-background-color);
+	border: var(--ifm-alert-border-width) solid var(--ifm-alert-border-color);
+	border-left-width: var(--ifm-alert-border-left-width);
+	border-radius: var(--ifm-alert-border-radius);
+	box-shadow: var(--ifm-alert-shadow);
+	color: var(--ifm-alert-foreground-color);
+	padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+
+[data-theme="dark"] .alert--usage {
+	--ifm-alert-background-color: rgba(152, 225, 184, 0.197);
+	--ifm-alert-background-color-highlight: rgba(0, 25, 51, 0.115);
+	--ifm-alert-foreground-color: rgb(220, 220, 220);
+	--ifm-alert-border-color: rgb(255, 240, 230);
+}
+
+.alert--usage {
+	--ifm-alert-background-color: rgba(127, 135, 130, 0.2);
+	--ifm-alert-background-color-highlight: rgba(6, 27, 48, 0.054);
+	--ifm-alert-foreground-color: rgb(120, 119, 119);
+	--ifm-alert-border-color: rgb(93, 82, 75);
+}
+
+.alert--example {
+	--ifm-alert-background-color: rgba(138, 176, 167, 0.29);
+	--ifm-alert-background-color-highlight: rgba(6, 27, 48, 0.054);
+	--ifm-alert-foreground-color: rgb(225, 225, 234);
+	--ifm-alert-border-color: rgb(138, 176, 167);
+}
+
+[data-theme="dark"] .alert--example {
+	--ifm-alert-background-color: rgb(131, 159, 162);
+	--ifm-alert-background-color-highlight: rgba(0, 25, 51, 0.115);
+	--ifm-alert-foreground-color: rgb(220, 220, 220);
+	--ifm-alert-border-color: rgb(138, 176, 167);
+}
+
+.example {
+	--ifm-code-background: var(--ifm-alert-background-color-highlight);
+	--ifm-link-color: var(--ifm-alert-foreground-color);
+	--ifm-link-hover-color: var(--ifm-alert-foreground-color);
+	--ifm-link-decoration: underline;
+	--ifm-tabs-color: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active: var(--ifm-alert-foreground-color);
+	--ifm-tabs-color-active-border: var(--ifm-alert-border-color);
+	background-color: var(--ifm-alert-background-color);
+	border: var(--ifm-alert-border-width) solid var(--ifm-alert-border-color);
+	border-left-width: var(--ifm-alert-border-left-width);
+	border-radius: var(--ifm-alert-border-radius);
+	box-shadow: var(--ifm-alert-shadow);
+	color: black;
+	padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+}
+.example .admonitionHeading_FzoX code {
+	text-transform: none;
+}
+.example a {
+	color: var(--example-a-color);
+}
+
+/* ---- Pin --- */
+.pin .admonitionHeading_FzoX {
+	text-transform: none;
+}
+
+.pin .admonitionIcon_rXq6 svg {
+	--ifm-alert-foreground-color: rgb(85, 117, 120);
+	color: var(--ifm-alert-foreground-color);
+}
+
+/* When we generate PDF files:
+ 
+ - avoid breaks in the middle of:
+   - code blocks
+   - admonitions (notes, tips, etc.)
+
+ - we do not need to show the:
+   - feedback widget.
+   - edit this page
+   - breadcrumbs
+
+ */
+@media print {
+  .theme-code-block , .theme-admonition {
+     break-inside: avoid;
+  }
+}
+
+@media print {
+    .theme-edit-this-page , .feedback_Ak7m , .theme-doc-breadcrumbs   {
+        display: none;
+    }
+}
